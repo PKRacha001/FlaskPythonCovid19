@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+body {
+	font-family: 'Lobster', cursive;
+	background-color: rgb(250, 250, 250);
+}
+
+.full-screen {
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.container {
+	display: flex;
+	font-family: 'Lobster', cursive;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.image {
+	width: 370px;
+	margin-top: 50px;
+}
+
+@media only screen and (max-width: 770px) {
+	.container {
+		margin: 0 10%;
+	}
+
+	.image {
+		width: 100%;
+	}
+}

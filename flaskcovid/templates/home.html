@@ -1,0 +1,31 @@
+<!-- prettier-ignore -->
+{% extends "layout.html" %} 
+{% block content %}
+<div class="container">
+	<div class="row justify-content-between">
+		<div class="card text-white bg-warning mb-3 mr-3">
+			<h5 class="card-header">Infected</h5>
+			<div class="card-body">
+				<p class="card-text h1 counter-count">{{ confirmed }}</p>
+			</div>
+		</div>
+		<div class="card text-white bg-success mb-3 mr-3">
+			<h5 class="card-header">Recovered</h5>
+			<div class="card-body">
+				<p class="card-text h1 counter-count">{{ recovered }}</p>
+			</div>
+		</div>
+		<div class="card text-white bg-danger mb-3">
+			<h5 class="card-header">Deaths</h5>
+			<div class="card-body">
+				<p class="card-text h1 counter-count">{{ deaths }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<form method="POST">
+		{{ form.csrf_token }} {{ form.countries }} {{ form.submit(class="btn btn-outline-info") }}
+	</form>
+</div>
+{% endblock content %}
